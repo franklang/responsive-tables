@@ -1,3 +1,5 @@
-# responsive-tables
+responsive-tables
+=================
 
-http://jsfiddle.net/frontenddeveloper/ay5v30p5/
+* [Flip Scroll DEMO](https://jsfiddle.net/1gfbn6kz/4/)
+* [No More Tables DEMO](https://jsfiddle.net/frontenddeveloper/tna4fnmw/5/)
