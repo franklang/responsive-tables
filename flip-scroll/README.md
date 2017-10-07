@@ -23,3 +23,8 @@ $.tableFlipScroll('.table-flip-scroll');
   }
 }
 ```
+
+
+TODOs
+-----
+* Move $thead-width variable to core mixin (scss)
