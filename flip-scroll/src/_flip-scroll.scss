@@ -1,5 +1,6 @@
 // Core CSS (required)
-@mixin table-flip-scroll-core() {
+@mixin table-flip-scroll-core(
+  $thead-width: 33.33333%) {
   table { 
     display: block;
     position: relative;
@@ -8,7 +9,8 @@
     border-spacing: 0;
     thead {
       display: block; 
-      float: left; 
+      float: left;
+      width: $thead-width;
       tr {
         display: block;
       }
@@ -36,13 +38,9 @@
 
 // Skin CSS (optional)
 @mixin table-flip-scroll-skin(
-  $thead-width: 33.33333%, 
   $border-width: 1px, 
   $border-color: #ccc) {
   table {
-    thead {
-      width: $thead-width;
-    }
     th {
       border-bottom: 0;
       border-left: 0;

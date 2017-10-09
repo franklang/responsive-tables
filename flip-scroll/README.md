@@ -25,6 +25,6 @@ $.tableFlipScroll('.table-flip-scroll');
 ```
 
 
-TODOs
+TODO:
 -----
-* Move $thead-width variable to core mixin (scss)
+* Add a destroy method.
