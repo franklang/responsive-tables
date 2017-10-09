@@ -1,0 +1,62 @@
+@mixin no-more-tables-core(
+  $thead-width: 33.33333%,
+  $text-align: left) {
+  /* Force table to not be like tables anymore */
+  table, 
+  thead, 
+  tbody, 
+  th, 
+  td, 
+  tr { 
+    display: block; 
+  }
+ 
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead {
+    tr { 
+      position: absolute;
+      top: -99999px;
+      left: -99999px;
+    }
+  }
+ 
+  td { 
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    white-space: normal;
+    padding-left: $thead-width;
+    text-align: $text-align;
+    &:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      white-space: nowrap;
+      /* Label the data */
+      content: attr(data-title);
+
+      width: $thead-width - ($thead-width/10);
+      text-align: $text-align;            
+    }
+  }
+}
+
+@mixin no-more-tables-skin(
+  $border-width: 1px, 
+  $border-color: #ccc,
+  $padding-y: 8px,
+  $padding-x: 10px){
+  tr {
+    border: $border-width solid $border-color;
+  }
+  td { 
+    /* Behave  like a "row" */
+    border-bottom: $border-width solid $border-color; 
+    &:before {
+      /* Top/left values mimic padding */
+      top: $padding-y;
+      left: $padding-x;
+      padding-right: $padding-x; 
+    }
+  }
+}
